@@ -1,21 +1,8 @@
-import express from 'express';
+const http = require('http');
+const app = require('./app');
+const port = process.env.PORT || 3000 
+const server = http.createServer(app)
 
-const app = express();
-
-const users = []
-
-app.post('/users', (req, res) => {
-
-    console.log(req)
-
-    res.send('OK post ok')
-
-})
-
-app.get('/users', (req, res) => {
-
-    res.send('Olá Dev');
-
-})
-
-app.listen(3000)
+server.listen(port, () => {
+    console.log(`App rodando na porta ${port}`);
+});

@@ -1,7 +1,7 @@
 {
   "name": "api-node",
   "version": "1.0.0",
-  "type":"module",
+  
   "description": "Aprendendo e praticando na criação e manutenção de uma API",
   "main": "index.js",
   "scripts": {
