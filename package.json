@@ -1,0 +1,23 @@
+{
+  "name": "api-node",
+  "version": "1.0.0",
+  "type":"module",
+  "description": "Aprendendo e praticando na criação e manutenção de uma API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeyfferson/api-node.git"
+  },
+  "author": "Jeyfferson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jeyfferson/api-node/issues"
+  },
+  "homepage": "https://github.com/Jeyfferson/api-node#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
