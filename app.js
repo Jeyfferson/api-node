@@ -10,6 +10,25 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false})); //Apenas dados simples
 app.use(bodyParser.json()); // json de entradas do body
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); //Permissão de controle de origem - * todos
+    res.header(
+        'Access-Control-Allow-Header',
+        'Content-Type',
+        'Origin',
+        'X-Requested-With',
+        'Accept',
+        'Authorization'
+    ); //Autorizando apenas os especificados
+
+    if(req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
+        return res.status(200).send({})
+    }
+
+    next();
+})
+
 app.use('/produtos', routerProdutos);
 app.use('/pedidos', routerPedidos);
 

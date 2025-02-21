@@ -23,7 +23,7 @@ router.post('/', (req, res, next) => {
 });
 
 //Lista um produto especifico
-router.get('/:id_product',(req, res, next) => {
+router.get('/:id_produto',(req, res, next) => {
     const id = req.params.id_produto;
 
     if (id==='especial') {
